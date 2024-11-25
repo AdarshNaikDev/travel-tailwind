@@ -13,9 +13,9 @@ function Navbar() {
         setNav(!nav)
     }
     return (
-        <div className='flex justify-between h-20 px-4 items-center' >
+        <div className='flex justify-between h-20 px-4 items-center absolute z-10 text-white w-full' >
             <div>
-                <h1 className='font-roboto '> {nav? '':'BEACHES'} </h1>
+                <h1 className='font-roboto '> BEACHES </h1>
             </div>
             <ul className='hidden md:flex  '>
                 <li className='nav-item'>Home</li>
@@ -29,19 +29,19 @@ function Navbar() {
                 <CiSearch  size={20}/>
             </div>
             <div className='md:hidden z-10 cursor-pointer'  onClick={handleNav}>
-                {nav ?  <IoCloseSharp size={20} />: <IoMenu size={20}/>}
+                {nav ?  <IoCloseSharp size={20} color='black' />: <IoMenu size={20}/>}
                 
                
             </div>
 
-            <div  className= {nav ?  'absolute left-0 top-0 bg-gray-100/90 w-full px-4 py-7 flex flex-col md:hidden' : 'absolute left-[100%] '}>
+            <div  className= {nav ?  'absolute left-0 top-0 bg-gray-100/90 w-full px-4 py-7 flex flex-col md:hidden' : 'absolute left-[100%] md:hidden hidden'}>
             <ul>
-                <h1 >BEACHES</h1>
-                <li className='border-b'>Home</li>
-                <li className='border-b'>Destinations</li>
-                <li className='border-b'>Travel</li>
-                <li className='border-b'>View</li>
-                <li className='border-b'>Book</li>
+                <h1 className='mt-[-10px] font-roboto  text-black'>BEACHES</h1>
+                <li className='border-b text-black'>Home</li>
+                <li className='border-b  text-black'>Destinations</li>
+                <li className='border-b  text-black'>Travel</li>
+                <li className='border-b  text-black'>View</li>
+                <li className='border-b  text-black'>Book</li>
                 <div className='flex flex-col'>
                     <button className='my-6'>
                         Search
